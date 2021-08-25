@@ -4,12 +4,14 @@ import {MatToolbarModule} from '@angular/material/toolbar'
 import { HeaderComponent } from './../../core/components/header/header.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HomeComponent } from './pages/home/home.component';
 
 
 
 @NgModule({
   declarations: [
-    HeaderComponent
+    HeaderComponent,
+    HomeComponent
   ],
   imports: [
     CommonModule,

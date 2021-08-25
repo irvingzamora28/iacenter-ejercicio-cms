@@ -5,6 +5,7 @@ import { HeaderComponent } from './../../core/components/header/header.component
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './pages/home/home.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 
@@ -17,6 +18,7 @@ import { HomeComponent } from './pages/home/home.component';
     CommonModule,
     MatButtonModule,
     MatIconModule,
+    FlexLayoutModule,
     MatToolbarModule
   ],
   exports: [

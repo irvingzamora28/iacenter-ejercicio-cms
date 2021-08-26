@@ -1,21 +1,28 @@
-// .outerContainer {
-//     padding: 5px;
-//     border: 1px solid #b6b6b6;
-//     box-sizing: content-box;
-//   }
-  
-//   div.container {
-//     color: #eeeeee;
-//     margin-bottom: 10px;
-//   }
-  
-//   div.container > div {
-//     height: 50px;
-//     width: 50px;
-//     background-color: blue;
-//   }
+::ng-deep .mat-form-field-underline {
+  display: none;
+}
 
-  .container .cardWrap div{
-    height: 300px;
-    border:2px solid gray;
-    }
+::ng-deep .mat-form-field {
+    width: 100%;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+    border-radius: 30px!important;
+    padding: .75em .75em 0 .75em;
+}
+
+.home__container-icon {
+    font-size:40px;
+    line-height:32px;
+}
+
+.home__container-title {
+    font-size:28px;
+    line-height:36px;
+    margin: 0.5rem 1rem;
+}
+
+.material-icons{
+    display: inline-flex;
+    vertical-align: top;
+}

@@ -6,7 +6,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './pages/home/home.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-
+import {MatInputModule} from '@angular/material/input';
 
 
 @NgModule({
@@ -19,6 +19,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatButtonModule,
     MatIconModule,
     FlexLayoutModule,
+    MatInputModule,
     MatToolbarModule
   ],
   exports: [

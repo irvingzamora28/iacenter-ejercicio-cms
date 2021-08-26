@@ -7,18 +7,21 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './pages/home/home.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatInputModule} from '@angular/material/input';
-
+import { UserCardComponent } from './components/user-card/user-card.component';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    UserCardComponent
   ],
   imports: [
     CommonModule,
     MatButtonModule,
     MatIconModule,
     FlexLayoutModule,
+    MatCardModule,
     MatInputModule,
     MatToolbarModule
   ],

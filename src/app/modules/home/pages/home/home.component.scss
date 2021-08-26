@@ -10,16 +10,19 @@
     border-radius: 30px!important;
     padding: .75em .75em 0 .75em;
 }
-
-.home__container-icon {
-    font-size:40px;
-    line-height:32px;
+.container__home {
+    margin-top: 2.5rem;
 }
 
-.home__container-title {
-    font-size:28px;
-    line-height:36px;
-    margin: 0.5rem 1rem;
+.container__home-icon {
+    font-size:3rem;
+    line-height:1.8rem;
+}
+
+.container__home-title {
+    font-size:1.5rem;
+    line-height:2rem;
+    margin: 0.5rem 2rem;
 }
 
 .material-icons{

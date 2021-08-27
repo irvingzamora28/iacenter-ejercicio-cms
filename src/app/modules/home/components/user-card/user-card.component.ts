@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { User } from 'src/app/core/models/User';
 
 @Component({
   selector: 'app-user-card',
@@ -6,6 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-card.component.scss']
 })
 export class UserCardComponent implements OnInit {
+  @Input() user: User = {
+    id: 0,
+    firstName: '',
+    lastName: '',
+    location: '',
+    phone: '',
+    gender: '',
+    createdAt: '',
+    updatedAt: '',
+  };
 
   constructor() { }
 

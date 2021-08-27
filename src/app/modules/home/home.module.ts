@@ -10,6 +10,7 @@ import {MatInputModule} from '@angular/material/input';
 import { UserCardComponent } from './components/user-card/user-card.component';
 import {MatCardModule} from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
     FlexLayoutModule,
     MatCardModule,
     MatInputModule,
+    MatGridListModule,
     MatToolbarModule
   ],
   exports: [

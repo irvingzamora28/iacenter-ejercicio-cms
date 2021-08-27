@@ -3,7 +3,7 @@
         <mat-card-title class="user-card--title">
             <div fxLayout.lt-md="row" class="user-card--title-text-align" fxLayout.md="row" fxLayoutAligmnet="space-between center" fxLayoutGap="20px">
                 <div fxFlex="80">
-                    Nombre Apellido
+                    {{user.firstName}} {{user.lastName}}
                 </div>
                 <div fxFlex="20" align="end">
                     <button mat-raised-button color="primary" class="user-card--title-button">
@@ -21,10 +21,10 @@
             <div fxFlex="80" align="start" class="user-card--content-alignment">
                 <div fxLayout="column" >
                     <div fxFlex="100">
-                        <p>Lorem ipsum dolor sit.</p>
+                        <p>{{user.location}}</p>
                     </div>
                     <div fxFlex="100">    
-                        <p>Lorem ipsum dolor sit.</p>
+                        <p>{{user.phone}}</p>
                     </div>
                 </div>
             </div>

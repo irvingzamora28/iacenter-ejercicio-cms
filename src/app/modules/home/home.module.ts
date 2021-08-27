@@ -12,12 +12,15 @@ import {MatCardModule} from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { UserDialogComponent } from './components/user-dialog/user-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     HomeComponent,
-    UserCardComponent
+    UserCardComponent,
+    UserDialogComponent
   ],
   imports: [
     CommonModule,
@@ -29,6 +32,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatInputModule,
     MatGridListModule,
     MatPaginatorModule,
+    MatDialogModule,
     MatToolbarModule
   ],
   exports: [

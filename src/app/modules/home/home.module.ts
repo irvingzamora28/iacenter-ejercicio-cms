@@ -9,6 +9,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatInputModule} from '@angular/material/input';
 import { UserCardComponent } from './components/user-card/user-card.component';
 import {MatCardModule} from '@angular/material/card';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import {MatCardModule} from '@angular/material/card';
   ],
   imports: [
     CommonModule,
+    HttpClientModule,
     MatButtonModule,
     MatIconModule,
     FlexLayoutModule,

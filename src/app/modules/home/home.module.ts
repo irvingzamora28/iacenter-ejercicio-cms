@@ -11,6 +11,7 @@ import { UserCardComponent } from './components/user-card/user-card.component';
 import {MatCardModule} from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatCardModule,
     MatInputModule,
     MatGridListModule,
+    MatPaginatorModule,
     MatToolbarModule
   ],
   exports: [

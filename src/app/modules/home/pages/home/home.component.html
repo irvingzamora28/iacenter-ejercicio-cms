@@ -24,10 +24,18 @@
 	<div fxLayout.lt-md="column" fxLayout.md="column" fxLayoutAligmnet="space-between center" fxLayoutGap="20px">
 		<div fxFlex="80" fxFlexOffset="10">
 			<div fxLayout="row wrap" fxLayoutGap="16px grid">
-				<div *ngFor="let user of users" fxFlex="25%" fxFlex.xs="100%" fxFlex.md="33%" fxFlex.sm="50%">
+				<div *ngFor="let user of pageSlice" fxFlex="25%" fxFlex.xs="100%" fxFlex.md="33%" fxFlex.sm="50%">
 					<app-user-card [user]="user"></app-user-card>
 				</div>
 			</div>
+
+			<mat-paginator [length]="this.users.length"
+              [pageSize]="16"
+              [pageSizeOptions]="[16, 20, 50, 100]"
+			  (page)="onPageChange($event)"
+              aria-label="Select page">
+			</mat-paginator>
+
 		</div>
 	</div>
 </div>

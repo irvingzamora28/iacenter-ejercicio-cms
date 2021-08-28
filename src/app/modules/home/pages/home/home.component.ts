@@ -2,6 +2,7 @@ import { UserService } from './../../../../core/http/user/user.service';
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/core/models/User';
 import { PageEvent } from '@angular/material/paginator';
+import { USERS } from 'src/app/core/mocks/mock-users';
 
 @Component({
   selector: 'app-home',
@@ -9,17 +10,17 @@ import { PageEvent } from '@angular/material/paginator';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  users: User[] = []
+  users: User[] = USERS
   pageSlice: User[] = []
   constructor(private userService: UserService) { }
   
   ngOnInit(): void {
-    this.userService.getUsers().subscribe((users) => {
-      this.users = users
-      this.pageSlice = this.users.slice(0,16)
-      console.log(this.users);
+    // this.userService.getUsers().subscribe((users) => {
+    //   this.users = users
+    //   console.log(this.users);
       
-    })
+    // })
+    this.pageSlice = this.users.slice(0,16)
   }
 
   onPageChange(event: PageEvent) {

@@ -1,14 +1,44 @@
-<h2 mat-dialog-title>User Dialog Component</h2>
+<h2 mat-dialog-title>Agregar usuario</h2>
 <mat-dialog-content class="mat-typography">
-  <h3>Develop across all platforms</h3>
-  <p>Learn one way to build applications with Angular and reuse your code and abilities to build
-    apps for any deployment target. For web, mobile web, native mobile and native desktop.</p>
+    <div fxLayout.lt-md="column" fxLayout.md="column" fxLayoutAligmnet="space-between center" fxLayoutGap="20px">
+        <div fxLayout="row wrap" fxLayoutGap="16px grid">
+            <div fxFlex="50%" fxFlex.xs="100%">
+                <form class="example-form">
+                    <mat-form-field class="example-full-width" appearance="fill">
+                      <mat-label>Nombre</mat-label>
+                      <input matInput placeholder="Nombre">
+                    </mat-form-field>
+                  
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Ubicación</mat-label>
+                        <input matInput placeholder="Ubicación">
+                      </mat-form-field>
+                  </form>
 
-  <p>An app's components typically define many views, arranged hierarchically. Angular provides
-  the Router service to help you define navigation paths among views. The router provides
-  sophisticated in-browser navigational capabilities.</p>
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="H">Hombre</mat-radio-button>
+                    <mat-radio-button value="m">Mujer</mat-radio-button>
+                  </mat-radio-group>
+            </div>
+            <div fxFlex="50%" fxFlex.xs="100%">
+                <form class="example-form">
+                    <mat-form-field class="example-full-width" appearance="fill">
+                      <mat-label>Apellido</mat-label>
+                      <input matInput placeholder="Apellido">
+                    </mat-form-field>
+                  
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Celular</mat-label>
+                        <input matInput placeholder="Celular">
+                      </mat-form-field>
+                  </form>
+            </div>
+        </div>
+
+
+    </div>
 </mat-dialog-content>
-<mat-dialog-actions align="end">
-  <button mat-button mat-dialog-close>Cancel</button>
-  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Guardar</button>
+<mat-dialog-actions align="center" class="user-dialog--actions">
+    <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Agregar</button>
+    <button mat-button mat-dialog-close>Cancelar</button>
 </mat-dialog-actions>

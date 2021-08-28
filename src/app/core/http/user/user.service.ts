@@ -5,7 +5,7 @@ import { User } from '../../models/User';
 
 const httpOptions = {
   headers: new HttpHeaders({
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json',
   })
 }
 
@@ -18,7 +18,7 @@ export class UserService {
   constructor(private http:HttpClient) { }
 
   getUsers(): Observable<User[]> {
-    return this.http.get<User[]>(this.apiUrl)
+    return this.http.get<User[]>(this.apiUrl, httpOptions)
   }
 
 }

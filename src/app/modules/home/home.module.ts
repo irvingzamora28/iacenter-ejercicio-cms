@@ -14,6 +14,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { UserDialogComponent } from './components/user-dialog/user-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import {MatRadioModule} from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     FlexLayoutModule,
     MatCardModule,
     MatInputModule,
+    MatRadioModule,
     MatGridListModule,
     MatPaginatorModule,
     MatDialogModule,

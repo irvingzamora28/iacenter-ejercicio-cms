@@ -1,4 +1,6 @@
+import { UserDialogComponent } from './../user-dialog/user-dialog.component';
 import { Component, Input, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { User } from 'src/app/core/models/User';
 
 @Component({
@@ -18,7 +20,19 @@ export class UserCardComponent implements OnInit {
     updatedAt: '',
   };
 
-  constructor() { }
+  constructor(public dialog: MatDialog) {}
+
+
+  editUserDialog(user: User) {
+    
+    const dialogRef = this.dialog.open(UserDialogComponent, {
+      data: user,
+   });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
 
   ngOnInit(): void {
   }

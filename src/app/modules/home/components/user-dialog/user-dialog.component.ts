@@ -1,6 +1,7 @@
 import { UserService } from './../../../../core/http/user/user.service';
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { User } from 'src/app/core/models/User';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-user-dialog',
@@ -17,7 +18,16 @@ export class UserDialogComponent implements OnInit {
     { name: 'Mujer', value: 'm' },
   ];
   chosenGender: string = this.genders[0].value;
-  constructor(private userService: UserService) {}
+  constructor(@Inject(MAT_DIALOG_DATA) public user: User, private userService: UserService) {
+    if (user) {
+      this.firstName = user.firstName ? user.firstName : ''
+      this.lastName = user.lastName ? user.lastName : ''
+      this.location = user.location ? user.location : ''
+      this.phone = user.phone ? user.phone : ''
+      this.chosenGender = user.gender ? user.gender : 'h'
+    }
+    
+  }
 
   ngOnInit(): void {}
 

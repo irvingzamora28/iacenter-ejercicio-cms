@@ -1,12 +1,14 @@
 <mat-card class="user-card--container">
     <mat-card-header class="user-card--header">
         <mat-card-title class="user-card--title">
-            <div fxLayout.lt-md="row" class="user-card--title-text-align" fxLayout.md="row" fxLayoutAligmnet="space-between center" fxLayoutGap="20px">
+            <div fxLayout.lt-md="row" class="user-card--title-text-align" fxLayout.md="row"
+                fxLayoutAligmnet="space-between center" fxLayoutGap="20px">
                 <div fxFlex="80">
                     {{user.firstName}} {{user.lastName}}
                 </div>
                 <div fxFlex="20" align="end">
-                    <button mat-raised-button color="primary" (click)="editUserDialog(user)" class="user-card--title-button">
+                    <button mat-raised-button color="primary" (click)="editUserDialog(user)"
+                        class="user-card--title-button">
                         <mat-icon class="user-card--title-edit-icon">mode_edit</mat-icon>
                     </button>
                 </div>
@@ -14,16 +16,19 @@
         </mat-card-title>
     </mat-card-header>
     <mat-card-content class="user-card--content">
-        <div  fxLayout.lt-md="row" fxLayout.md="row" fxLayoutAligmnet="space-between center" fxLayoutGap="20px">
+        <div fxLayout.lt-md="row" fxLayout.md="row" fxLayoutAligmnet="space-between center" fxLayoutGap="20px">
             <div fxFlex="20">
-                <img src="https://www.pngfind.com/pngs/m/470-4703547_icon-user-icon-hd-png-download.png" alt="User image" width="76" height="76">
+                <div class="user-card--image-{{user.gender == 'f' ? user.gender : 'm'}}">
+                    <img src="assets/images/icono_{{user.gender == 'f' ? user.gender : 'm'}}.svg" alt="User image"
+                        width="76" height="76">
+                </div>
             </div>
             <div fxFlex="80" align="start" class="user-card--content-alignment">
-                <div fxLayout="column" >
+                <div fxLayout="column">
                     <div fxFlex="100">
                         <p>{{user.location}}</p>
                     </div>
-                    <div fxFlex="100">    
+                    <div fxFlex="100">
                         <p>{{user.phone}}</p>
                     </div>
                 </div>

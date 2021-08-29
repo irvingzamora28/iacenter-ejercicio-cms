@@ -14,8 +14,8 @@ export class UserDialogComponent implements OnInit {
   location: string = '';
   phone: string = '';
   genders = [
-    { name: 'Hombre', value: 'h' },
-    { name: 'Mujer', value: 'm' },
+    { name: 'Hombre', value: 'm' },
+    { name: 'Mujer', value: 'f' },
   ];
   chosenGender: string = this.genders[0].value;
   constructor(@Inject(MAT_DIALOG_DATA) public user: User, private userService: UserService) {
@@ -24,7 +24,7 @@ export class UserDialogComponent implements OnInit {
       this.lastName = user.lastName ? user.lastName : ''
       this.location = user.location ? user.location : ''
       this.phone = user.phone ? user.phone : ''
-      this.chosenGender = user.gender ? user.gender : 'h'
+      this.chosenGender = user.gender ? user.gender : 'm'
     }
     
   }

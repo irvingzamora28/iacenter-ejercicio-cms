@@ -15,6 +15,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { UserDialogComponent } from './components/user-dialog/user-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import {MatRadioModule} from '@angular/material/radio';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import {MatRadioModule} from '@angular/material/radio';
     MatGridListModule,
     MatPaginatorModule,
     MatDialogModule,
+    FormsModule,
     MatToolbarModule
   ],
   exports: [

@@ -13,12 +13,16 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class UserService {
-  private apiUrl = 'http://iacenter.victortalamantes.com/users'
+  private apiUrl = 'http://iacenter.victortalamantes.com/user'
 
   constructor(private http:HttpClient) { }
 
   getUsers(): Observable<User[]> {
-    return this.http.get<User[]>(this.apiUrl, httpOptions)
+    return this.http.get<User[]>(`${this.apiUrl}s`, httpOptions)
+  }
+
+  addUser(user: User): Observable<User> {
+    return this.http.post<User>(this.apiUrl, user, httpOptions)
   }
 
 }

@@ -10,6 +10,8 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 export class UserDialogComponent implements OnInit {
   action: string = 'create';
+  action_title: string = "Agregar"
+  action_button_text: string = "Agregar"
   id: number = 1;
   firstName: string = '';
   lastName: string = '';
@@ -32,8 +34,12 @@ export class UserDialogComponent implements OnInit {
       this.phone = user.phone ? user.phone : ''
       this.chosenGender = user.gender ? user.gender : 'm'
       this.action = 'update'
+      this.action_title = 'Editar'
+      this.action_button_text = 'Guardar'
       this.fnUpdateUser  = (user: User) => { data.updateUser(user)}
     } else {
+      this.action_title = 'Agregar'
+      this.action_button_text = 'Agregar'
       this.action = 'create'
     }
     

@@ -1,4 +1,4 @@
-<h2 mat-dialog-title>Agregar usuario</h2>
+<h2 mat-dialog-title align="center">{{action_title}} usuario</h2>
 <form class="example-form" (ngSubmit)="onSubmit()">
 <mat-dialog-content class="mat-typography">
     <div fxLayout.lt-md="column" fxLayout.md="column" fxLayoutAligmnet="space-between center" fxLayoutGap="20px">
@@ -35,7 +35,7 @@
         </div>
     </mat-dialog-content>
     <mat-dialog-actions align="center" class="user-dialog--actions">
-        <button mat-button mat-dialog-close type="submit">Agregar</button>
+        <button mat-button mat-dialog-close type="submit">{{action_button_text}}</button>
         <button mat-button mat-dialog-close>Cancelar</button>
     </mat-dialog-actions>
 </form>

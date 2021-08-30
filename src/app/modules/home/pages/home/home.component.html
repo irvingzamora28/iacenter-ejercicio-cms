@@ -12,7 +12,7 @@
 					<form class="example-form">
 						<mat-form-field class="example-full-width" appearance="fill">
 							<mat-label>Buscador</mat-label>
-							<input type="text" matInput placeholder="" />
+							<input type="text" matInput name="search" placeholder="" (input)="onSearchChange($event)" />
 							<mat-icon matSuffix>search</mat-icon>
 						</mat-form-field>
 					</form>
@@ -30,7 +30,7 @@
 			</div>
 
 			<mat-paginator [length]="this.users.length"
-              [pageSize]="16"
+              [pageSize]="this.pageSize"
               [pageSizeOptions]="[16, 20, 50, 100]"
 			  (page)="onPageChange($event)"
               aria-label="Select page">

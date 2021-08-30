@@ -1,5 +1,5 @@
 import { UserService } from './../../../../core/http/user/user.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { User } from 'src/app/core/models/User';
 import { PageEvent } from '@angular/material/paginator';
 import { USERS } from 'src/app/core/mocks/mock-users';
@@ -30,6 +30,10 @@ export class HomeComponent implements OnInit {
       endIndex = this.users.length
     }
     this.pageSlice = this.users.slice(startIndex, endIndex)
+  }
+
+  exampleFunctionHome(user: User) {
+    console.log("Updated user");
   }
 
 }

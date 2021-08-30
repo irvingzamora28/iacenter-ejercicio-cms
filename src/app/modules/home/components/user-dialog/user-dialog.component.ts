@@ -19,9 +19,12 @@ export class UserDialogComponent implements OnInit {
     { name: 'Hombre', value: 'm' },
     { name: 'Mujer', value: 'f' },
   ];
+  fnUpdateUser: any
   chosenGender: string = this.genders[0].value;
-  constructor(@Inject(MAT_DIALOG_DATA) public user: User, private userService: UserService) {
-    if (user) {
+  constructor(@Inject(MAT_DIALOG_DATA) private data: any, private userService: UserService) {
+    
+    if (data) {
+      let user = data.user
       this.id = user.id ? user.id : 1
       this.firstName = user.firstName ? user.firstName : ''
       this.lastName = user.lastName ? user.lastName : ''
@@ -29,6 +32,7 @@ export class UserDialogComponent implements OnInit {
       this.phone = user.phone ? user.phone : ''
       this.chosenGender = user.gender ? user.gender : 'm'
       this.action = 'update'
+      this.fnUpdateUser  = (user: User) => { data.updateUser(user)}
     } else {
       this.action = 'create'
     }
@@ -58,6 +62,7 @@ export class UserDialogComponent implements OnInit {
       this.userService.addUser(newUser).subscribe((user) => {});
     } else {
       this.userService.updateUser(newUser).subscribe((user) => { });
+      this.fnUpdateUser(newUser)
     }
 
     this.firstName = '';

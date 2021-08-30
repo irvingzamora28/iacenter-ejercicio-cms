@@ -25,7 +25,7 @@
 		<div fxFlex="80" fxFlexOffset="10">
 			<div fxLayout="row wrap" fxLayoutGap="16px grid">
 				<div *ngFor="let user of pageSlice" fxFlex="25%" fxFlex.xs="100%" fxFlex.md="33%" fxFlex.sm="50%">
-					<app-user-card [user]="user"></app-user-card>
+					<app-user-card [user]="user" (exampleFunction)="exampleFunctionHome(user)"></app-user-card>
 				</div>
 			</div>
 

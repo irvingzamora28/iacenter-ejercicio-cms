@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("../assets/fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url("../assets/fonts/Poppins-Bold.otf");
+}
+
+::ng-deep body,
+::ng-deep span,
+::ng-deep div {
+  font-family: "Poppins-Bold" !important;
+  font-weight: normal;
+  font-style: normal;
+}

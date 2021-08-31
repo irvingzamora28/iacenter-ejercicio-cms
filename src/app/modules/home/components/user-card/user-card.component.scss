@@ -16,10 +16,11 @@
 
 .user-card--title {
   margin-bottom: 0rem !important;
+  font-size: 1.1rem;
 }
 
 .user-card--title-text-align {
-  line-height: 1.8rem;
+  line-height: 2.6rem;
 }
 .user-card--title-edit-icon {
   line-height: 0.8rem;
@@ -40,6 +41,10 @@
 
 .user-card--content {
   padding: 0.5rem;
+}
+.user-card--content p{
+  font-family: "Poppins-Regular" !important;
+  text-align: left;
 }
 
 .user-card--content-alignment {

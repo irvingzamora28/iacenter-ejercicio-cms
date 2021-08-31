@@ -1,8 +1,7 @@
 <div class="container container__home" fxLayout="column" fxLayoutGap="20px">
 	<div fxLayout.lt-md="column" fxLayout.md="column" fxLayoutAligmnet="space-between center" fxLayoutGap="20px">
-		<div fxFlex="10"></div>
-		<div fxFlex="80">
-			<div fxLayout.lt-md="column" fxLayout.md="column" fxLayout="row" fxLayoutAligmnet="space-between center"
+		<div fxFlex="80" fxFlexOffset="10">
+			<div fxLayout.lt-sm="column" class="container__home-search-container" fxLayout.sm="column" fxLayout="row" fxLayoutAligmnet="space-between center"
 				fxLayoutGap="20px">
 				<div fxFlex="60">
 					<mat-icon class="container__home-icon">people</mat-icon>
@@ -19,10 +18,9 @@
 				</div>
 			</div>
 		</div>
-		<div fxFlex="10"></div>
 	</div>
 	<div fxLayout.lt-md="column" fxLayout.md="column" fxLayoutAligmnet="space-between center" fxLayoutGap="20px">
-		<div fxFlex="80" fxFlexOffset="10">
+		<div fxFlex="80" fxFlexOffset="10" fxFlex.lg="80">
 			<div fxLayout="row wrap" fxLayoutGap="16px grid">
 				<div *ngFor="let user of pageSlice" fxFlex="25%" fxFlex.xs="100%" fxFlex.md="33%" fxFlex.sm="50%">
 					<app-user-card [user]="user" (exampleFunction)="exampleFunctionHome(user)"></app-user-card>

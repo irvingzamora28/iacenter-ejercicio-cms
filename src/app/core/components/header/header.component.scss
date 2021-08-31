@@ -1,3 +1,9 @@
-.header-spacer {
-    flex: 1 1 auto;
+@media screen and (max-width: 768px) {
+    .toolbar--add-button span {
+      display: none;
+    }
+  }
+  
+  .toolbar--add-button {
+    float: right;
 }

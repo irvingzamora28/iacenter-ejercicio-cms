@@ -1,12 +1,8 @@
-<mat-toolbar color="primary">
-  <button
-    mat-icon-button
-    class="header-icon"
-    aria-label="header icon-button with menu icon"
-  >
-    <mat-icon>menu</mat-icon>
-  </button>
-  <span>Ejercicio CMS</span>
-  <span class="header-spacer"></span>
-  <button mat-raised-button color="primary" (click)="openDialog()">Agregar usuario <mat-icon>add</mat-icon></button>
+<mat-toolbar color="primary" fxLayout="row" fxLayoutGap="20px">
+  <div fxFlex="10"></div>
+  <div fxFlex="80">
+    <span>Ejercicio CMS</span>
+    <button mat-raised-button class="toolbar--add-button" color="primary" (click)="openDialog()"><span>Agregar usuario</span> <mat-icon>add</mat-icon></button>
+  </div>
+  <div fxFlex="10"></div>
 </mat-toolbar>

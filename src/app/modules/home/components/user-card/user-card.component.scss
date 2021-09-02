@@ -1,65 +1,8 @@
-.user-card--container {
-  padding: 0rem;
-  border-radius: 0.6rem;
-  margin: 0.8rem;
-}
-
-.user-card--title-button {
-  width: 28px !important;
-  height: 28px !important;
-  padding: 0rem;
-  margin: 0rem;
-  min-width: unset !important;
-  min-height: unset !important;
-  background-color: #1755d0;
-}
-
-.user-card--title {
-  margin-bottom: 0rem !important;
-  font-size: 1.1rem;
-}
-
-.user-card--title-text-align {
-  line-height: 2.6rem;
-}
-.user-card--title-edit-icon {
-  line-height: 0.8rem;
-}
-
-.user-card--header {
-  /* Style */
-  background: #427df0;
-  color: white;
-  padding: 0.5rem;
-  font-family: Helvetica;
-  border-radius: 0.6rem 0.6rem 0rem 0rem;
-  /* Actual logic */
-  display: list-item;
-  align-items: center;
-  justify-content: center;
-}
-
-.user-card--content {
-  padding: 0.5rem;
-}
-.user-card--content p{
-  font-family: "Poppins-Regular" !important;
-  text-align: left;
-}
-
-.user-card--content-alignment {
-  text-align: center;
-  line-height: 0.6rem;
-  position: absolute;
-  top: 55%;
-  left: 40%;
-}
-
 .user-card--image {
   min-width: 76px;
+  max-height: 76px;
   border-radius: 8px;
   text-align: center;
-  padding: 0.4rem 0rem;
   &-f {
     @extend .user-card--image;
     background-color: #ffc824;
@@ -68,4 +11,8 @@
     @extend .user-card--image;
     background-color: #1fada7;
   }
+}
+
+.user-card--text {
+  font-family: sans-serif;
 }

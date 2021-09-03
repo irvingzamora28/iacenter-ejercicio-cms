@@ -8,9 +8,9 @@
   src: url("../assets/fonts/Poppins-Bold.otf");
 }
 
-::ng-deep body,
-::ng-deep span,
-::ng-deep div {
+::ng-deep nav,
+::ng-deep .home-header,
+::ng-deep .user-card-title {
   font-family: "Poppins-Bold" !important;
   font-weight: normal;
   font-style: normal;

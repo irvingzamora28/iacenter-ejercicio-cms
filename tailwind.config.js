@@ -8,6 +8,7 @@ module.exports = {
     purge: {
       content: [
         './src/**/*.{html,ts,css,scss,sass,less,styl}',
+        './src/app/modules/home/components/user-card/user-card.component.html'
       ]
     },
     darkMode: 'class', // or 'media' or 'class'
